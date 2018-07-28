@@ -1,0 +1,34 @@
+<ion-header>
+
+  
+</ion-header>
+
+
+<ion-content class="background">
+  <ion-card>
+    <ion-card-header>
+      R
+    </ion-card-header>
+    <ion-card-content>
+    <div class="profile-image">
+    <img src="{{imgurl}}">
+    </div>
+    <div class="spacer" style="height: 10px;"></div>
+   <div>
+    <button ion-button round (click)="chooseimage()" class="button1">Choose an image</button>
+  </div>
+  <div class="spacer" style="height: 10px;"></div>
+
+  <div [hidden]="!moveon">
+    <button ion-button round  (click)="proceed()" class="button2">Skip this step</button>
+  </div>
+  <div [hidden]="moveon">
+    <button ion-button round  (click)="updateproceed()" class="button3">Upload & proceed</button>
+  </div>
+       
+    </ion-card-content>
+  </ion-card>
+  
+
+</ion-content>
+

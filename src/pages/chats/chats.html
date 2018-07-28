@@ -1,0 +1,49 @@
+<ion-header>
+
+  <ion-navbar color="hcolor">
+    <ion-title>Chats</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addPeople()">
+        <ion-icon name="person-add"></ion-icon>
+      </button>
+    </ion-buttons> 
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="background">
+<ion-list no-lines>
+  <ion-list-header>
+    <h2 style="font-size: 15px;font-weight: bold;font-style: italic;text-align: center;">Friend Requests</h2>
+  </ion-list-header>
+  <ion-item-sliding *ngFor="let item of myrequests" class="listOption">
+    <ion-item>
+    <ion-avatar item-left>
+      <img  src="{{item.photoURL}}">
+    </ion-avatar>
+    <h4 style="font-weight: bold;font-style: italic;color: blue;">{{item.displayName}}</h4>
+    </ion-item>
+    <ion-item-options>
+      <button ion-button color="secondary" (click)="accept(item)">
+        <ion-icon name="checkmark"></ion-icon>
+        Accept
+      </button>
+      <button ion-button color="danger" (click)="reject(item)">
+        <ion-icon name="trash"></ion-icon>
+        Reject
+      </button>
+    </ion-item-options>
+  </ion-item-sliding>
+  <ion-list-header>
+    <h2 style="font-size: 15px;font-weight: bold;font-style: italic;text-align: center;">Friends</h2>
+  </ion-list-header>
+  <div class="listOption">
+  <ion-item *ngFor="let item of myfriends" (click)="gochat(item)" >
+    <ion-avatar item-left>
+      <img src={{item.photoURL}}>
+    </ion-avatar>
+    <h3 style="font-weight: bold;font-style: italic;color: blue;">{{item.displayName}}</h3>
+  </ion-item></div>
+</ion-list>
+</ion-content>

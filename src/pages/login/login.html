@@ -1,0 +1,42 @@
+<ion-header>
+
+  
+</ion-header>
+
+
+<ion-content class="background">
+  <ion-card>
+    <ion-card-header>
+      R
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list no-lines>
+        <div class="spacer" style="height: 10px;"></div>
+        <ion-item>
+          <ion-input type="email" placeholder="Email" [(ngModel)]="user.email" required></ion-input>
+        </ion-item>
+        <div class="spacer" style="height: 5px;"></div>
+        <ion-item>
+          <ion-input type="password" placeholder="Password" [(ngModel)]="user.password" required></ion-input>
+        </ion-item>
+        <div class="spacer" style="height: 10px;"></div>
+        <ion-row>
+  <ion-col col-6> 
+    <button ion-button color="primary" class="button1" (click)="signup();"large >
+      <b>Sign Up</b>
+    </button>
+  </ion-col>
+
+  <ion-col col-6>
+    <button ion-button color="primary" class="button2" (click)="signin();" large>
+      <b>Sign In</b>
+    </button>
+  </ion-col>
+</ion-row>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  
+
+</ion-content>
+

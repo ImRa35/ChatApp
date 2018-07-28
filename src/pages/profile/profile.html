@@ -1,0 +1,34 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-title>Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content class="background">
+  <ion-card>
+    <ion-card-header>
+      <h2 (click)="editname()" class="name">{{displayName}}</h2>
+    </ion-card-header>
+    <ion-card-content>
+    <div class="profile-image" (click)="editimage()">
+  <img src="{{avatar}}">
+</div>
+<div class="spacer" style="height: 10px;"></div>
+<div class="spacer" style="height: 10px;"></div>
+
+  
+
+<div class="spacer" style="height: 10px;"></div>
+<div>
+  <button ion-button round  color="primary" (click)="logout()" class="button1">Logout</button>
+</div>
+       
+    </ion-card-content>
+  </ion-card>
+  
+
+</ion-content>
+
